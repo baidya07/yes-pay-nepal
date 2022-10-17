@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.yes_pay_nepal">
    <application
-        android:label="yes_pay_nepal"
+        android:label="YesPayNepal"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
