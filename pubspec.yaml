@@ -1,0 +1,287 @@
+name: yes_pay_nepal
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.16.2 <3.0.0"
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  sms_autofill: ^2.2.0
+
+
+  flutter_localizations: # Setting up an internation­alized app: the Flutter_localizations package
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.2
+
+
+
+  custom_timer: ^0.1.1 #A Flutter package to create a customizable timer with controller.
+
+  #  Easily add staggered animations to your ListView, GridView, Column and Row children as shown in Material Design guidelines
+  flutter_staggered_animations: ^1.0.0
+
+  slide_countdown: ^0.1.2 #A Flutter package to create easy slide animation countdown / countup timer.
+
+  #  An SVG rendering and widget library for Flutter, which allows painting
+  #  and displaying Scalable Vector Graphics 1.1 files.
+  flutter_svg: any
+
+  dotted_line: ^3.1.0 #This package allows you to draw dotted lines with Flutter. You can draw a beautiful dotted line.
+
+  lottie: ^1.2.1 #Render After Effects animations natively on Flutter. This package is a pure Dart implementation of a Lottie player.
+
+  #  A flexible widget for user notification.
+  #  Customize your text, button, duration, animations and much more.
+  #  For Android devs, it is made to replace Snackbars and Toasts.
+  another_flushbar: ^1.10.28
+
+  #  A wrapper around InheritedWidget to make them easier to use and more reusable.
+  #  provider: ^6.0.2
+
+  #  Simple direct Service Locator that allows to decouple
+  #  the interface from a concrete implementation and to access the concrete implementation from everywhere in your App
+  get_it: ^7.2.0
+
+  injectable: ^1.5.3 #Injectable is a convenient code generator for get_it. Inspired by Angular DI, Guice DI and inject.dart.
+
+  #  library to load and cache network images. Can also be used with placeholder and error shared.
+  cached_network_image: ^3.2.0
+
+  flutter_html: ^2.2.1 #A Flutter widget rendering static HTML and CSS as Flutter widgets.
+
+  namefully: ^0.1.7 #A Dart utility for handling person names in a particular order, way, or shape.
+
+  #  A package provides an easy way to add shimmer effect
+  shimmer: ^2.0.0
+
+  carousel_slider: ^4.0.0  #A carousel slider widget, support infinite scroll and custom child widget.
+
+  badges: ^2.0.2 #A flutter package for creating badges. Badges can be used for an additional marker for any widget, e.g. show a number of home_drawer in a shopping cart.
+
+  #Flutter plugin for Firebase Core, enabling connecting to multiple Firebase apps.
+  firebase_core: ^1.12.0
+
+  firebase_analytics: ^9.1.6
+
+  #  Vector design and runtime animation for Flutter.
+  flare_flutter: ^3.0.2
+
+  #  Contains code to deal with internationalized/localized messages,
+  #  date and number formatting and parsing, bi-directional text, and other internationalization issues.
+  intl: ^0.17.0
+
+  flutter_rating_bar: ^4.0.0 #A simple yet fully customizable ratingbar for flutter which also include a rating bar indicator, supporting any fraction of rating.
+
+  #  plugin for selecting images from the Android and iOS image library,
+  #  and taking new pictures with the camera.
+  image_picker: ^0.8.4+4
+
+  #  Permission plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API to request and check permissions.
+  permission_handler:
+
+  qr_code_scanner: ^0.7.0 #QR code scanner that can be embedded inside flutter. It uses zxing in Android and MTBBarcode scanner in iOS.
+
+  #  Toast Library for Flutter, Easily create toast messages in single line of code
+  fluttertoast: ^8.0.8
+
+  material_design_icons_flutter: ^5.0.6595 #The Material Design Icons designed by the community for Flutter
+
+  font_awesome_flutter: ^9.2.0 #The Font Awesome Icon pack available as Flutter Icons. Provides 1600 additional icons to use in your apps.
+
+  dio: ^4.0.4 #A powerful Http client for Dart, which supports Interceptors, FormData, Request Cancellation, File Downloading, Timeout etc.
+
+  #  This is for OTP screens. It helps on creating OTP screens easily with different features.
+  pin_code_fields: ^7.3.0
+
+  expandable: ^5.0.1 #A Flutter widget that can be expanded or collapsed by clicking on a header or an icon.
+
+  quiver: ^3.0.1+1 #Quiver is a set of utility libraries for Dart that makes using many Dart libraries easier and more convenient, or adds additional functionality.
+
+  html: ^0.15.0 #A Flutter widget rendering static HTML and CSS as Flutter shared.
+
+  #  Flutter plugin for launching a URL on Android and iOS. Supports web, phone, SMS, and email schemes.
+  url_launcher: ^6.0.18
+
+  flutter_widget_from_html: ^0.8.5 #Flutter package to render html as shared that supports hyperlink, image, audio, video, iframe and many other tags.
+
+  modal_bottom_sheet: ^2.0.0 #Create awesome and powerful modal bottom sheets. Material, Cupertino iOS 13 or create your own style
+
+  #  Flutter plugin providing detailed information about the device (make, model, etc.), and Android or iOS version the app is running on.
+  device_info: ^2.0.3
+
+  dropdown_search: ^2.0.1 #Simple and robust Searchable Dropdown with item search feature, making it possible to use an offline item list or filtering URL for easy customization.
+
+  #  Flutter plugin for querying information about the application package, such as CFBundleVersion on iOS or versionCode on Android.
+  package_info: ^2.0.2
+
+  #  A Flutter staggered grid view (masonry tiles) which supports multiple columns with rows of varying sizes
+  flutter_staggered_grid_view: ^0.6.0
+
+  #  Package to build Material Form with fields like TextField, DropDown, Switches etc.
+  #  with ability to create custom FormFields and composability and reuse validation functions.
+  #  This package provides common reusable FormFieldValidators for Flutter FormField shared with internationalization
+  flutter_form_builder: 7.0.0
+
+  form_builder_validators: ^7.3.0
+
+  material_floating_search_bar: ^0.3.6 #A Flutter implementation of an expandable and animated floating search bar, also known as persistent search.
+
+  step_progress_indicator: ^1.0.2 #Bar indicator made of a series of selected and unselected steps
+
+  #  Introduction/Onboarding package for flutter app with some customizations possibilities
+  introduction_screen: ^2.1.0
+
+  #  Flutter Secure Storage provides API to store data in secure storage. Keychain is used in iOS, KeyStore based solution is used in Android.
+  flutter_secure_storage:
+
+  #  Sentry SDK for Flutter. This package aims to support different Flutter targets by relying on the many platforms supported by Sentry with native SDKs.
+  sentry_flutter: ^6.2.2
+
+  pretty_dio_logger: ^1.1.1 #Pretty Dio logger is a Dio interceptor that logs network calls in a pretty, easy to read format.
+
+  #  A pure Dart library that checks for internet by opening a socket to a list of specified addresses,
+  #  each with individual port and timeout. Defaults are provided for convenience
+  #  data_connection_checker: ^0.3.4
+  internet_connection_checker: ^0.0.1+3
+
+  #  Flutter Page Transition Package which is the transition second page
+  page_transition: ^2.0.4
+
+  #  Approximate how your Flutter app looks and performs on another device.
+  device_preview: ^1.0.0
+
+  im_stepper: ^0.1.3 #status_change is a widget that displays progress through a sequence of steps. This is a Cupertino version of the stock Material Stepper in Flutter.
+
+  dotted_border: any #A flutter package to let users easily add a dashed border around any widget.
+
+  #  Flutter plugin for getting commonly used locations on host platform file systems, such as the temp and app data directories.
+  path_provider: ^2.0.8
+
+  #  Lightweight and blazing fast key-value database written in pure Dart. Strongly encrypted using AES-256.
+  hive: ^2.0.5
+
+  nil: ^1.1.1 #A simple widget to add in the widget tree when you want to show nothing, with minimal impact on performance.
+
+  #  Extension for Hive. Makes it easier to use Hive in Flutter apps.
+  hive_flutter: ^1.1.0
+
+
+  auto_route: ^3.2.2 #AutoRoute is a declarative routing solution, where everything needed for navigation is automatically generated for you.
+
+  #  Code generation for immutable classes that has a simple syntax/API without compromising on the features.
+  freezed: ^1.1.1
+
+  pull_to_refresh: ^2.0.0  #a widget provided to the flutter scroll component drop-down refresh and pull up load.
+
+  freezed_annotation: any #a package containing annotations for freezed.
+
+  #  geolocator: 8.2.1  #Geolocation plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API for generic location (GPS etc.) functions.
+
+  flutter_dotenv: ^5.0.2 #Easily configure any flutter application with global variables using a `.env` file.
+
+  #  A package which simplifies the task of updating your Flutter app's launcher icon.
+  flutter_launcher_icons: ^0.9.2
+
+  jwt_decoder: ^2.0.1 #This small library helps you to decode Json Web Tokens, you can also know if a JWT is already expired.
+
+  hooks_riverpod: ^1.0.3
+
+  line_awesome_flutter: ^2.0.0   #The Line Awesome Icons pack for flutter. Provides 1542 additional icons to use in your apps.
+  animated_bottom_navigation_bar: ^1.1.0
+
+#to change app launcher icon add following section
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+    # add the generator to your dev_dependencies
+  #  injectable_generator:
+  json_annotation:
+  build_runner:
+  injectable_generator:
+
+  json_serializable: ^6.1.5
+  auto_route_generator:
+
+  # The "flutter_lints" package below contains a set of recommended lints to
+  # encourage good coding practices. The lint set provided by the package is
+  # activated in the `analysis_options.yaml` file located at the root of your
+  # package. See that file for information about deactivating specific lint
+  # rules and activating additional ones.
+  flutter_lints: ^1.0.0
+
+#flutter_icons:
+#  android: "launcher_icon"
+#  ios: true
+#  image_path: "assets/icon/launch-icon.png"
+#  min_sdk_android: 21
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/images/
+    - assets/images/dummy_images/
+    - assets/svg/
+    - assets/icon/
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages
