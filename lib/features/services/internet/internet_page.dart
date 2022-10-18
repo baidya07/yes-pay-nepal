@@ -28,10 +28,13 @@ class InternetPage extends StatelessWidget {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back_ios,
                               color: Colors.white,
                             )),
+                        const SizedBox(
+                          width: 20,
+                        ),
                         Text(
                           "Internet",
                           style: Theme.of(context)
@@ -41,7 +44,7 @@ class InternetPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Icon(
+                    const Icon(
                       Icons.search_sharp,
                       color: Colors.white,
                     ),
@@ -54,11 +57,51 @@ class InternetPage extends StatelessWidget {
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: SC.mW, vertical: SC.mH),
           child: Column(
-            children: const[
-               _Isps(
-                image: 'https://blog.apnic.net/wp-content/uploads/2020/06/WorldLink_white_banner-555x202.png?v=09862861d39bab1f96cc5cc93ff7f9c0',
-                title: 'WorldLink',
-              )
+            children: [
+               Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceAround,
+                 children: const [
+                   _Isps(
+                    image: 'https://worldlink.com.np/application/files/7515/9341/3883/wlink_logo.png',
+                    title: 'WorldLink',
+                  ),
+                   _Isps(
+                     image: 'https://subisu.net.np/assets/images/c07c9d98ada18fb549c8fcf1fcc44755.png',
+                     title: 'Subisu',
+                   ),
+                   _Isps(
+                     image: 'https://www.vianet.com.np/wp-content/themes/vianet/images/logo.png',
+                     title: 'Vianet',
+                   ),
+                   _Isps(
+                     image: 'https://www.classic.com.np/wp-content/uploads/2020/02/New-CT-logo-Gold.png',
+                     title: 'Classictech',
+                   ),
+                 ],
+               ),
+              SBC.xLH,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: const [
+                  _Isps(
+                    image: 'https://www.cgnet.com.np/frontend/img/logo/logo.png',
+                    title: 'CG Net',
+                  ),
+                  _Isps(
+                    image: 'https://websurfer.com.np/images/websurfer_isp_logo.png',
+                    title: 'Websurfer \n Internet',
+                  ),
+                  _Isps(
+                    image: 'http://www.techminds.com.np/wp-content/uploads/2020/08/logo-light.png',
+                    title: 'Techminds \n Networks',
+                  ),
+                  _Isps(
+                    image: 'https://admin.dishhome.com.np/uploads/images/1615365178.png',
+                    title: 'Dish Home',
+                  ),
+                ],
+              ),
+              SBC.xLH,
             ],
           ),
         ),
@@ -79,24 +122,24 @@ class _Isps extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Center(
-          child: Container(
-            height: 70,
-            width: 70,
-            decoration: BoxDecoration(
-              border: Border.all(
-                width: 0.1,
-              ),
-              borderRadius: BorderRadius.circular(15.0),
-            ),
-              child: CustomCachedNetworkImage(
-                  image, fit: BoxFit.contain,)),
+        Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(15),
+            border: Border.all(
+              width: 0.1,
+            )
+          ),
+          height: 60,
+          width: 60,
+          child: CustomCachedNetworkImage(
+              image, fit: BoxFit.fitWidth),
         ),
         SBC.mH,
         Text(
           title,
-          style: Theme.of(context).textTheme.bodyText2,
+          style: Theme.of(context).textTheme.caption,
         ),
       ],
     );
