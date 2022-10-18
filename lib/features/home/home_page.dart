@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/forms/buttons.dart';
+import 'package:yes_pay_nepal/core/presentation/widget/image_slider/image_slider.dart';
 
 import '../../core/presentation/resources/colors.dart';
 import '../../core/presentation/resources/size_constants.dart';
@@ -136,141 +137,168 @@ class _HomePageState extends State<HomePage> {
         //   onTap: (index) => setState(() => _bottomNavIndex = index),
         //   //other params
         // ),
-        body: Container(
-          padding:
-              const EdgeInsets.symmetric(horizontal: SC.lW, vertical: SC.mH),
-          // margin: const EdgeInsets.symmetric(horizontal: SC.lW, vertical: SC.mH),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 0.1,
+        body: SingleChildScrollView(
+          child: Container(
+            padding:
+                const EdgeInsets.symmetric(horizontal: SC.lW, vertical: SC.mH),
+            // margin: const EdgeInsets.symmetric(horizontal: SC.lW, vertical: SC.mH),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 0.1,
+                    ),
+                    boxShadow: const [
+                      BoxShadow(
+                        color: Colors.black12,
+                        offset: Offset(
+                          5.0,
+                          5.0,
+                        ),
+                        blurRadius: 10.0,
+                        spreadRadius: 2.0,
+                      ),
+                    ],
+                    borderRadius: BorderRadius.circular(13.0),
+                    color: const Color(0xffF8F8F8),
                   ),
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Colors.black12,
-                      offset: Offset(
-                        5.0,
-                        5.0,
-                      ),
-                      blurRadius: 10.0,
-                      spreadRadius: 2.0,
-                    ),
-                  ],
-                  borderRadius: BorderRadius.circular(13.0),
-                  color: const Color(0xffF8F8F8),
-                ),
-                padding: const EdgeInsets.symmetric(
-                    horizontal: SC.sW, vertical: SC.sH),
-                margin: const EdgeInsets.symmetric(
-                    horizontal: SC.sW, vertical: SC.sH),
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Your Savings",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(color: secondaryColor),
-                            ),
-                            Text(
-                              "xxxx.xx",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(color: primaryColor),
-                            ),
-                          ],
-                        ),
-                        const Icon(Icons.visibility),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.end,
-                          children: [
-                            Text(
-                              "Current Balance",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(color: secondaryColor),
-                            ),
-                            Text(
-                              "xxxx.xx",
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .bodyText2!
-                                  .copyWith(color: primaryColor),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    SBC.lH,
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        _TransactionTypes(
-                          iconName: "add_money.png",
-                          title: "Add Money",
-                        ),
-                        _TransactionTypes(
-                          iconName: "send_money.png",
-                          title: "Send Money",
-                        ),
-                        _TransactionTypes(
-                          iconName: "deposit.png",
-                          title: "Wallet to Bank",
-                        ),
-                      ],
-                    ),
-                    SBC.lH,
-                  ],
-                ),
-              ),
-              SBC.lH,
-              Row(
-                children: [
-                  Container(
-                      height: 30,
-                      width: 30,
-                      color: const Color(0xffF8F8F8),
-                      child: Image.asset(UIAssets.getDummyImage("Kyc.png"))),
-                  SBC.sW,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: SC.sW, vertical: SC.sH),
+                  margin: const EdgeInsets.symmetric(
+                      horizontal: SC.sW, vertical: SC.sH),
+                  child: Column(
                     children: [
-                      Text(
-                        "KYC Not Submitted",
-                        style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                            color: secondaryColor, fontWeight: FontWeight.w600),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Your Savings",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2!
+                                    .copyWith(color: primaryColor),
+                              ),
+                              Text(
+                                "NPR. 3,020.79",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2!
+                                    .copyWith(color: secondaryColor),
+                              ),
+                            ],
+                          ),
+                          const Icon(Icons.visibility),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Text(
+                                "Current Balance",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2!
+                                    .copyWith(color: primaryColor),
+                              ),
+                              Text(
+                                "NPR. 20,000.67",
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyText2!
+                                    .copyWith(color: secondaryColor),
+                              ),
+                            ],
+                          ),
+                        ],
                       ),
-                      Text("Please fill the KYC form to use our services.",
-                          style: Theme.of(context).textTheme.caption),
+                      SBC.lH,
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          _TransactionTypes(
+                            iconName: "add_money.png",
+                            title: "Add Money",
+                          ),
+                          _TransactionTypes(
+                            iconName: "send_money.png",
+                            title: "Send Money",
+                          ),
+                          _TransactionTypes(
+                            iconName: "deposit.png",
+                            title: "Wallet to Bank",
+                          ),
+                        ],
+                      ),
+                      SBC.lH,
                     ],
                   ),
-                ],
-              ),
-              SBC.xxLH,
-              SizedBox(
-                height: 100,
-                width: double.infinity,
-                child: Image.asset(UIAssets.getDummyImage("banner.png")),
-              ),
-              SBC.lH,
-              const _GeneralServices(),
-              SBC.lH,
-              Text(
-                "Favorite Services",
-                style: Theme.of(context).textTheme.bodyText1,
-              ),
-            ],
+                ),
+                SBC.lH,
+                Row(
+                  children: [
+                    Container(
+                        height: 30,
+                        width: 30,
+                        color: const Color(0xffF8F8F8),
+                        child: Image.asset(UIAssets.getDummyImage("Kyc.png"))),
+                    SBC.sW,
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "KYC Not Submitted",
+                          style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                              color: secondaryColor, fontWeight: FontWeight.w600),
+                        ),
+                        Text("Please fill the KYC form to use our services.",
+                            style: Theme.of(context).textTheme.caption),
+                      ],
+                    ),
+                  ],
+                ),
+                SBC.xxLH,
+                SizedBox(
+                  width: 500,
+                  height: 200,
+                  child: ImageSlider(
+                    dotPosition: DotPosition.bottomCenter,
+                    dotVerticalPadding: -15,
+                    dotSize: 5,
+
+                    images: [
+                      Image.asset(
+                        UIAssets.getDummyImage("banners1.jpg"),
+                        width: double.infinity,
+                        height: 0.5 * MediaQuery.of(context).size.height,
+                        fit: BoxFit.cover,
+                      ),
+                      Image.asset(
+                        UIAssets.getDummyImage("banners2.jpg"),
+                        width: double.infinity,
+                        height: 0.5 * MediaQuery.of(context).size.height,
+                        fit: BoxFit.cover,
+                      ),
+                    ],
+
+                  ),
+                ),
+                // SizedBox(
+                //   height: 100,
+                //   width: double.infinity,
+                //   child: Image.asset(UIAssets.getDummyImage("banner.png")),
+                // ),
+                SBC.lH,
+                const _GeneralServices(),
+                SBC.lH,
+                Text(
+                  "Favorite Services",
+                  style: Theme.of(context).textTheme.bodyText1,
+                ),
+              ],
+            ),
           ),
         ),
       ),
@@ -391,7 +419,7 @@ class _ServiceWidgets extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .caption!
-              .copyWith(color: secondaryColor),
+              .copyWith(color: primaryColor),
         ),
       ],
     );
