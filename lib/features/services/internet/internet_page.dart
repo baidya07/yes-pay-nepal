@@ -56,53 +56,64 @@ class InternetPage extends StatelessWidget {
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: SC.mW, vertical: SC.mH),
-          child: Column(
-            children: [
-               Row(
-                 mainAxisAlignment: MainAxisAlignment.spaceAround,
-                 children: const [
-                   _Isps(
-                    image: 'https://worldlink.com.np/application/files/7515/9341/3883/wlink_logo.png',
-                    title: 'WorldLink',
-                  ),
-                   _Isps(
-                     image: 'https://subisu.net.np/assets/images/c07c9d98ada18fb549c8fcf1fcc44755.png',
-                     title: 'Subisu',
-                   ),
-                   _Isps(
-                     image: 'https://www.vianet.com.np/wp-content/themes/vianet/images/logo.png',
-                     title: 'Vianet',
-                   ),
-                   _Isps(
-                     image: 'https://www.classic.com.np/wp-content/uploads/2020/02/New-CT-logo-Gold.png',
-                     title: 'Classictech',
-                   ),
-                 ],
-               ),
-              SBC.xLH,
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: const [
-                  _Isps(
-                    image: 'https://www.cgnet.com.np/frontend/img/logo/logo.png',
-                    title: 'CG Net',
-                  ),
-                  _Isps(
-                    image: 'https://websurfer.com.np/images/websurfer_isp_logo.png',
-                    title: 'Websurfer \n Internet',
-                  ),
-                  _Isps(
-                    image: 'http://www.techminds.com.np/wp-content/uploads/2020/08/logo-light.png',
-                    title: 'Techminds \n Networks',
-                  ),
-                  _Isps(
-                    image: 'https://admin.dishhome.com.np/uploads/images/1615365178.png',
-                    title: 'Dish Home',
-                  ),
-                ],
-              ),
-              SBC.xLH,
-            ],
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(15.0),
+                color: Colors.white,
+                border: Border.all(
+                  width: 0.1,
+                )
+            ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SBC.xLH,
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                   children: const [
+                     _Isps(
+                      image: 'https://worldlink.com.np/application/files/7515/9341/3883/wlink_logo.png',
+                      title: 'WorldLink',
+                    ),
+                     _Isps(
+                       image: 'https://subisu.net.np/assets/images/c07c9d98ada18fb549c8fcf1fcc44755.png',
+                       title: 'Subisu',
+                     ),
+                     _Isps(
+                       image: 'https://www.vianet.com.np/wp-content/themes/vianet/images/logo.png',
+                       title: 'Vianet',
+                     ),
+                     _Isps(
+                       image: 'https://www.classic.com.np/wp-content/uploads/2020/02/New-CT-logo-Gold.png',
+                       title: 'Classictech',
+                     ),
+                   ],
+                 ),
+                SBC.xLH,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    _Isps(
+                      image: 'https://www.cgnet.com.np/frontend/img/logo/logo.png',
+                      title: 'CG Net',
+                    ),
+                    _Isps(
+                      image: 'https://websurfer.com.np/images/websurfer_isp_logo.png',
+                      title: 'Websurfer \n Internet',
+                    ),
+                    _Isps(
+                      image: 'http://www.techminds.com.np/wp-content/uploads/2020/08/logo-light.png',
+                      title: 'Techminds \n Networks',
+                    ),
+                    _Isps(
+                      image: 'https://admin.dishhome.com.np/uploads/images/1615365178.png',
+                      title: 'Dish Home',
+                    ),
+                  ],
+                ),
+                SBC.xLH,
+              ],
+            ),
           ),
         ),
       ),

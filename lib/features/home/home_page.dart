@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/forms/buttons.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/image_slider/image_slider.dart';
 import 'package:yes_pay_nepal/features/services/internet/internet_page.dart';
+import 'package:yes_pay_nepal/features/services/khanepani/khanepani.dart';
 
 import '../../core/presentation/resources/colors.dart';
 import '../../core/presentation/resources/size_constants.dart';
@@ -360,10 +361,19 @@ class _GeneralServices extends StatelessWidget {
                           title: "Internet",
                         ));
                   }),
-                  const _ServiceWidgets(
-                    image: "khanepani.png",
-                    title: "Khanepani",
-                  ),
+                  Builder(builder: (context) {
+                    return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const KhanepaniPage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "khanepani.png",
+                          title: "khanepani",
+                        ));
+                  }),
                 ],
               ),
               SBC.lH,
