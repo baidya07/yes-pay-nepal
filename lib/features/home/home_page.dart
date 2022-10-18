@@ -181,14 +181,14 @@ class _HomePageState extends State<HomePage> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText2!
-                                    .copyWith(color: primaryColor),
+                                    .copyWith(color: secondaryColor),
                               ),
                               Text(
                                 "NPR. 3,020.79",
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText2!
-                                    .copyWith(color: secondaryColor),
+                                    .copyWith(color: primaryColor),
                               ),
                             ],
                           ),
@@ -201,14 +201,14 @@ class _HomePageState extends State<HomePage> {
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText2!
-                                    .copyWith(color: primaryColor),
+                                    .copyWith(color: secondaryColor),
                               ),
                               Text(
                                 "NPR. 20,000.67",
                                 style: Theme.of(context)
                                     .textTheme
                                     .bodyText2!
-                                    .copyWith(color: secondaryColor),
+                                    .copyWith(color: primaryColor),
                               ),
                             ],
                           ),
