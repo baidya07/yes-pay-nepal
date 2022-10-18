@@ -1,9 +1,12 @@
 class UIAssets {
   //image directory
   static const imageDir = "assets/images/";
+  //static const splashImageDir = "assets/images/dummy_images/";
+
 
 //app launcher and splash icons
-  static const appLogo = "${imageDir}app_logo.png";
+  static const appLogo = "${imageDir}applogo.png";
+  //static const newAppLogo = "${splashImageDir}applogo.png";
   static const appLogoWhite = "${imageDir}app_logo_white.png";
   static const introImage1 = "${imageDir}intro_screen_1.png";
   static const productPlaceholder = "${imageDir}product_placeholder.jpg";

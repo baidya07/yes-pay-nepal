@@ -22,11 +22,11 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:yes_pay_nepal/features/auth/presentation/screens/signin_page.dart';
+import 'features/splash_page/splash_page.dart';
 
 void main() {
   runApp(
-    SigninPage(),
+    SplashPage(),
   );
 }
 

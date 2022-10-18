@@ -15,7 +15,7 @@ class AppLogo extends StatelessWidget {
         child: AspectRatio(
       aspectRatio: aspectRatio,
       child: Image.asset(
-        UIAssets.appLogo,
+        UIAssets.getDummyImage('logo_home.png')
       ),
     ));
   }
@@ -32,7 +32,7 @@ class AppLogoRounded extends StatelessWidget {
     return ClipRRect(
         child: AspectRatio(
       aspectRatio: aspectRatio,
-      child: Image.asset(UIAssets.getImage('app_logo_rounded.png')),
+      child: Image.asset(UIAssets.getImage('Logo.png')),
     ));
   }
 }
