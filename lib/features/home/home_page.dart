@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/forms/buttons.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/image_slider/image_slider.dart';
+import 'package:yes_pay_nepal/features/services/electricity/electricity_page.dart';
 import 'package:yes_pay_nepal/features/services/internet/internet_page.dart';
 import 'package:yes_pay_nepal/features/services/khanepani/khanepani.dart';
 
@@ -344,9 +345,21 @@ class _GeneralServices extends StatelessWidget {
                           title: "Topup",
                         ));
                   }),
-                  const _ServiceWidgets(
-                    image: "electricity.png",
-                    title: "Electricity",
+                  Builder(
+                    builder: (context) {
+                      return InkWell(
+                        onTap: (){
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const ElectricityPage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "electricity.png",
+                          title: "Electricity",
+                        ),
+                      );
+                    }
                   ),
                   Builder(builder: (context) {
                     return InkWell(

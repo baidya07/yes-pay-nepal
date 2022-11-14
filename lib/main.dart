@@ -26,7 +26,7 @@ import 'features/splash_page/splash_page.dart';
 
 void main() {
   runApp(
-    SplashPage(),
+    const SplashPage(),
   );
 }
 
