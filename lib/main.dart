@@ -20,7 +20,6 @@
 //   });
 // }
 
-
 import 'package:flutter/material.dart';
 import 'features/splash_page/splash_page.dart';
 

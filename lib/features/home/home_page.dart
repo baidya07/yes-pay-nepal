@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/forms/buttons.dart';
 import 'package:yes_pay_nepal/core/presentation/widget/image_slider/image_slider.dart';
+import 'package:yes_pay_nepal/features/services/Hotel/hotel_page.dart';
 import 'package:yes_pay_nepal/features/services/electricity/electricity_page.dart';
 import 'package:yes_pay_nepal/features/services/internet/internet_page.dart';
 import 'package:yes_pay_nepal/features/services/khanepani/khanepani.dart';
@@ -8,6 +9,7 @@ import 'package:yes_pay_nepal/features/services/khanepani/khanepani.dart';
 import '../../core/presentation/resources/colors.dart';
 import '../../core/presentation/resources/size_constants.dart';
 import '../../core/presentation/resources/ui_assets.dart';
+import '../services/Cable_care/cable_Care_page.dart';
 import '../services/Flight/flight_page.dart';
 import '../services/Goverment/goverment_page.dart';
 import '../services/cable/tv_page.dart';
@@ -403,7 +405,7 @@ class _GeneralServices extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => FlightPage()));
+                                  builder: (context) => const FlightPage()));
                         },
                         child: const _ServiceWidgets(
                           image: "airplane.png",
@@ -419,7 +421,7 @@ class _GeneralServices extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Tvpage()));
+                                  builder: (context) => const Tvpage()));
                         },
                         child: const _ServiceWidgets(
                           image: "television.png",
@@ -428,7 +430,7 @@ class _GeneralServices extends StatelessWidget {
                       );
                     },
                   ),
-                  _ServiceWidgets(
+                  const _ServiceWidgets(
                     image: "data-collection.png",
                     title: "Data",
                   ),
@@ -439,7 +441,7 @@ class _GeneralServices extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => GovermentPage()));
+                                  builder: (context) => const GovermentPage()));
                         },
                         child: const _ServiceWidgets(
                           image: "government.png",
@@ -447,6 +449,80 @@ class _GeneralServices extends StatelessWidget {
                         ),
                       );
                     },
+                  ),
+                ],
+              ),
+              SBC.xxLH,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Builder(
+                    builder: (context) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const CableCarPage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "government.png",
+                          title: "Cable Car",
+                        ),
+                      );
+                    },
+                  ),
+                  Builder(
+                    builder: (context) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const HotelPage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "government.png",
+                          title: "Hotel",
+                        ),
+                      );
+                    },
+                  ),
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "",
+                  ),
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "Data",
+                  ),
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "Data",
+                  ),
+                ],
+              ),
+              SBC.xxLH,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "Data",
+                  ),
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "Data",
+                  ),
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "Data",
+                  ),
+                  const _ServiceWidgets(
+                    image: "data-collection.png",
+                    title: "Data",
                   ),
                 ],
               ),
