@@ -8,6 +8,9 @@ import 'package:yes_pay_nepal/features/services/khanepani/khanepani.dart';
 import '../../core/presentation/resources/colors.dart';
 import '../../core/presentation/resources/size_constants.dart';
 import '../../core/presentation/resources/ui_assets.dart';
+import '../services/Flight/flight_page.dart';
+import '../services/Goverment/goverment_page.dart';
+import '../services/cable/tv_page.dart';
 import '../wallet/topup_page.dart';
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 
@@ -253,8 +256,12 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         Text(
                           "KYC Not Submitted",
-                          style: Theme.of(context).textTheme.bodyText1!.copyWith(
-                              color: secondaryColor, fontWeight: FontWeight.w600),
+                          style: Theme.of(context)
+                              .textTheme
+                              .bodyText1!
+                              .copyWith(
+                                  color: secondaryColor,
+                                  fontWeight: FontWeight.w600),
                         ),
                         Text("Please fill the KYC form to use our services.",
                             style: Theme.of(context).textTheme.caption),
@@ -270,7 +277,6 @@ class _HomePageState extends State<HomePage> {
                     dotPosition: DotPosition.bottomCenter,
                     dotVerticalPadding: -15,
                     dotSize: 5,
-
                     images: [
                       Image.asset(
                         UIAssets.getDummyImage("banners1.jpg"),
@@ -285,7 +291,6 @@ class _HomePageState extends State<HomePage> {
                         fit: BoxFit.cover,
                       ),
                     ],
-
                   ),
                 ),
                 // SizedBox(
@@ -345,22 +350,20 @@ class _GeneralServices extends StatelessWidget {
                           title: "Topup",
                         ));
                   }),
-                  Builder(
-                    builder: (context) {
-                      return InkWell(
-                        onTap: (){
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const ElectricityPage()));
-                        },
-                        child: const _ServiceWidgets(
-                          image: "electricity.png",
-                          title: "Electricity",
-                        ),
-                      );
-                    }
-                  ),
+                  Builder(builder: (context) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const ElectricityPage()));
+                      },
+                      child: const _ServiceWidgets(
+                        image: "electricity.png",
+                        title: "Electricity",
+                      ),
+                    );
+                  }),
                   Builder(builder: (context) {
                     return InkWell(
                         onTap: () {
@@ -392,22 +395,58 @@ class _GeneralServices extends StatelessWidget {
               SBC.lH,
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  _ServiceWidgets(
-                    image: "airplane.png",
-                    title: "Airlines",
+                children: [
+                  Builder(
+                    builder: (context) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => FlightPage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "airplane.png",
+                          title: "Airlines",
+                        ),
+                      );
+                    },
                   ),
-                  _ServiceWidgets(
-                    image: "television.png",
-                    title: "Cable",
-                  ),
-                  _ServiceWidgets(
-                    image: "government.png",
-                    title: "Government",
+                  Builder(
+                    builder: (context) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Tvpage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "television.png",
+                          title: "Cable",
+                        ),
+                      );
+                    },
                   ),
                   _ServiceWidgets(
                     image: "data-collection.png",
                     title: "Data",
+                  ),
+                  Builder(
+                    builder: (context) {
+                      return InkWell(
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GovermentPage()));
+                        },
+                        child: const _ServiceWidgets(
+                          image: "government.png",
+                          title: "Government",
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -485,5 +524,3 @@ class _TransactionTypes extends StatelessWidget {
     );
   }
 }
-
-

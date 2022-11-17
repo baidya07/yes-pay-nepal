@@ -15,6 +15,9 @@ class SBC {
   ///xlH for extra large Height(15)
   static SizedBox get xLH => const SizedBox(height: 15);
 
+  //// xLHP for large Height (40)
+  static SizedBox get xLHP => const SizedBox(height: 40);
+
   ///xxlH for extra large Height(20)
   static SizedBox get xxLH => const SizedBox(height: 20);
 
@@ -36,6 +39,9 @@ class SBC {
 
 ///SizeConstants for raw size values
 class SC {
+  /// small height (3)
+  static const double sZ = 3;
+
   ///small height(5)
   static const double sH = 5;
 

@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:yes_pay_nepal/core/presentation/resources/colors.dart';
-import 'package:yes_pay_nepal/core/presentation/resources/ui_assets.dart';
-import 'package:yes_pay_nepal/core/presentation/widget/cached_network_image_builder.dart';
+import 'package:yes_pay_nepal/core/presentation/resources/size_constants.dart';
 
-import '../../../core/presentation/resources/size_constants.dart';
+import '../../../core/presentation/widget/cached_network_image_builder.dart';
 
-class InternetPage extends StatelessWidget {
-  const InternetPage({Key? key}) : super(key: key);
+class GovermentPage extends StatelessWidget {
+  const GovermentPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          // title: const Text("Goverment Payment"),
           elevation: 0,
           backgroundColor: primaryColor,
           actions: [
@@ -36,7 +36,7 @@ class InternetPage extends StatelessWidget {
                           width: 20,
                         ),
                         Text(
-                          "Internet",
+                          "Govt. Payment",
                           style: Theme.of(context)
                               .textTheme
                               .bodyText2!
@@ -59,11 +59,12 @@ class InternetPage extends StatelessWidget {
               const EdgeInsets.symmetric(horizontal: SC.mW, vertical: SC.mH),
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: Colors.white,
-                border: Border.all(
-                  width: 0.1,
-                )),
+              borderRadius: BorderRadius.circular(15.0),
+              color: Colors.white,
+              border: Border.all(
+                width: 0.1,
+              ),
+            ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -71,54 +72,46 @@ class InternetPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: const [
-                    _Isps(
-                      image:
-                          'https://worldlink.com.np/application/files/7515/9341/3883/wlink_logo.png',
-                      title: 'WorldLink',
+                    _Govpay(
+                      title: "Traffic Police \n Fine Payment",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
                     ),
-                    _Isps(
-                      image:
-                          'https://subisu.net.np/assets/images/c07c9d98ada18fb549c8fcf1fcc44755.png',
-                      title: 'Subisu',
+                    _Govpay(
+                      title: "Bluebook \n Renewe",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
                     ),
-                    _Isps(
-                      image:
-                          'https://www.vianet.com.np/wp-content/themes/vianet/images/logo.png',
-                      title: 'Vianet',
+                    _Govpay(
+                      title: "Password \n Payment",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
                     ),
-                    _Isps(
-                      image:
-                          'https://www.classic.com.np/wp-content/uploads/2020/02/New-CT-logo-Gold.png',
-                      title: 'Classictech',
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
-                    _Isps(
-                      image:
-                          'https://www.cgnet.com.np/frontend/img/logo/logo.png',
-                      title: 'CG Net',
-                    ),
-                    _Isps(
-                      image:
-                          'https://websurfer.com.np/images/websurfer_isp_logo.png',
-                      title: 'Websurfer \n Internet',
-                    ),
-                    _Isps(
-                      image:
-                          'http://www.techminds.com.np/wp-content/uploads/2020/08/logo-light.png',
-                      title: 'Techminds \n Networks',
-                    ),
-                    _Isps(
-                      image:
-                          'https://admin.dishhome.com.np/uploads/images/1615365178.png',
-                      title: 'Dish Home',
+                    _Govpay(
+                      title: "Password \n Payment",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
                     ),
                   ],
                 ),
                 SBC.xLH,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    _Govpay(
+                      title: "No \n Objection \n  Letter",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                    _Govpay(
+                      title: "Social \n Security \n Fund",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                    _Govpay(
+                      title: "Citizen \n Pension \n Schema",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                    _Govpay(
+                      title: "Third \n Party \n Insurance",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                  ],
+                )
               ],
             ),
           ),
@@ -128,10 +121,10 @@ class InternetPage extends StatelessWidget {
   }
 }
 
-class _Isps extends StatelessWidget {
+class _Govpay extends StatelessWidget {
   final String image;
   final String title;
-  const _Isps({
+  const _Govpay({
     required this.title,
     required this.image,
     Key? key,

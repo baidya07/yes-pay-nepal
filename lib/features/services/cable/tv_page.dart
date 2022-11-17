@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:yes_pay_nepal/core/presentation/resources/colors.dart';
-import 'package:yes_pay_nepal/core/presentation/resources/ui_assets.dart';
-import 'package:yes_pay_nepal/core/presentation/widget/cached_network_image_builder.dart';
+import 'package:yes_pay_nepal/core/presentation/resources/size_constants.dart';
 
-import '../../../core/presentation/resources/size_constants.dart';
+import '../../../core/presentation/widget/cached_network_image_builder.dart';
 
-class InternetPage extends StatelessWidget {
-  const InternetPage({Key? key}) : super(key: key);
+class Tvpage extends StatelessWidget {
+  const Tvpage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
+          // title: const Text("Goverment Payment"),
           elevation: 0,
           backgroundColor: primaryColor,
           actions: [
@@ -36,7 +36,7 @@ class InternetPage extends StatelessWidget {
                           width: 20,
                         ),
                         Text(
-                          "Internet",
+                          "TV",
                           style: Theme.of(context)
                               .textTheme
                               .bodyText2!
@@ -59,11 +59,12 @@ class InternetPage extends StatelessWidget {
               const EdgeInsets.symmetric(horizontal: SC.mW, vertical: SC.mH),
           child: Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.0),
-                color: Colors.white,
-                border: Border.all(
-                  width: 0.1,
-                )),
+              borderRadius: BorderRadius.circular(15.0),
+              color: Colors.white,
+              border: Border.all(
+                width: 0.1,
+              ),
+            ),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
@@ -71,54 +72,48 @@ class InternetPage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: const [
-                    _Isps(
+                    _Cablepay(
+                      title: "Dish Home \n  Payment",
                       image:
-                          'https://worldlink.com.np/application/files/7515/9341/3883/wlink_logo.png',
-                      title: 'WorldLink',
+                          'https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/DishHome_Logo.svg/800px-DishHome_Logo.svg.png',
                     ),
-                    _Isps(
-                      image:
-                          'https://subisu.net.np/assets/images/c07c9d98ada18fb549c8fcf1fcc44755.png',
-                      title: 'Subisu',
+                    _Cablepay(
+                      title: "SIM \n TV",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
                     ),
-                    _Isps(
-                      image:
-                          'https://www.vianet.com.np/wp-content/themes/vianet/images/logo.png',
-                      title: 'Vianet',
+                    _Cablepay(
+                      title: "Clear \n TV",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
                     ),
-                    _Isps(
-                      image:
-                          'https://www.classic.com.np/wp-content/uploads/2020/02/New-CT-logo-Gold.png',
-                      title: 'Classictech',
-                    ),
-                  ],
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: const [
-                    _Isps(
-                      image:
-                          'https://www.cgnet.com.np/frontend/img/logo/logo.png',
-                      title: 'CG Net',
-                    ),
-                    _Isps(
-                      image:
-                          'https://websurfer.com.np/images/websurfer_isp_logo.png',
-                      title: 'Websurfer \n Internet',
-                    ),
-                    _Isps(
-                      image:
-                          'http://www.techminds.com.np/wp-content/uploads/2020/08/logo-light.png',
-                      title: 'Techminds \n Networks',
-                    ),
-                    _Isps(
-                      image:
-                          'https://admin.dishhome.com.np/uploads/images/1615365178.png',
-                      title: 'Dish Home',
+                    _Cablepay(
+                      title: "Mero \n TV",
+                      image: 'https://merotv.com.np/images/logo_merotv.png',
                     ),
                   ],
                 ),
                 SBC.xLH,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: const [
+                    _Cablepay(
+                      title: "Birat \n Cable",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                    _Cablepay(
+                      title: "MAX \n TV",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                    _Cablepay(
+                      title: "WorldLink \n TV",
+                      image:
+                          'https://cdn.fing.io/images/isp/NP/logo/worldlink_logo.png',
+                    ),
+                    _Cablepay(
+                      title: "Prabhau \n TV",
+                      image: 'https://nepal.gov.np/splash/nepal-govt.png',
+                    ),
+                  ],
+                )
               ],
             ),
           ),
@@ -128,10 +123,10 @@ class InternetPage extends StatelessWidget {
   }
 }
 
-class _Isps extends StatelessWidget {
+class _Cablepay extends StatelessWidget {
   final String image;
   final String title;
-  const _Isps({
+  const _Cablepay({
     required this.title,
     required this.image,
     Key? key,
